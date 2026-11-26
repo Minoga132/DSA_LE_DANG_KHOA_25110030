@@ -34,6 +34,3 @@ When I first ran the program, generating the 100,000-bid test file failed with a
 
 Yes, the worst case is still **O(n^2)**. Median-of-three only guarantees the pivot is not the smallest or largest of the three sampled elements; it says nothing about the other n − 3 elements. Specially built inputs ("median-of-three killer" sequences) can still make every partition very unbalanced, giving recursion depth close to n and about n^2/2 comparisons. In practice it removes the O(n^2) behaviour on sorted and reverse-sorted input, so the expected time is O(n log n), but the theoretical worst case does not change.
 
-## Test coverage
-
-Small test (`test_data/small.txt`) for Tasks A–D, edge cases in `test_data/` (empty, single bid, all equal amounts, reversed, floating-point extremes), and 100,000 random bids (`test_data/large.txt`, generated with std::mt19937) for Task E.
